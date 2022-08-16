@@ -1,3 +1,35 @@
+function getNext12MonthNamesWithYear() {
+    var now = new Date();
+    var month = now.getMonth();
+    var year = now.getFullYear();
+
+    var names = ['January', 'February', 'March', 'April', 'May', 'June',
+                 'July', 'August', 'September', 'October', 'November', 'December'];
+
+    var res = [];
+    for (var i = 0; i < 13; ++i) {
+        res.push(names[month] + ' ' + year);
+        if (++month === 12) {
+            month = 0;
+            ++year;
+        }
+    }
+    return res;
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+
+
+
+
+
+
+
 function DateUtilFunctions() {
     var self = this;
 
